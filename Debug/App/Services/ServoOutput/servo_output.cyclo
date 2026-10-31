@@ -1,0 +1,6 @@
+../App/Services/ServoOutput/servo_output.c:40:17:ServoOutput_ClampPulse	3
+../App/Services/ServoOutput/servo_output.c:55:17:ServoOutput_GetTim4ClockHz	2
+../App/Services/ServoOutput/servo_output.c:72:13:ServoOutput_WritePulse	1
+../App/Services/ServoOutput/servo_output.c:85:6:ServoOutput_Init	1
+../App/Services/ServoOutput/servo_output.c:168:6:ServoOutput_Update	1
+../App/Services/ServoOutput/servo_output.c:285:6:ServoOutput_ForceClosed	1

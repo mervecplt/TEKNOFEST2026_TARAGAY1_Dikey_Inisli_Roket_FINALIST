@@ -1,0 +1,79 @@
+TARAGAY-T1 P83 vs ExpHover R46 - SELECTIVE LOW-RISK MERGE AUDIT
+================================================================
+Date: 2026-09-09
+
+BASE KEPT
+---------
+TARAGAY_T1_P83_MOTION_CONFIDENCE_PE9_LIVE_SD_30HZ_RCS_XY_SWAP
+
+REFERENCE REVIEWED
+------------------
+ExpHover_R46_NODE1_NODE3_REAL_CAN_ID_SWAP_DIAG
+
+ADOPTED (LOW-RISK / OBSERVER-ONLY EXCEPT EXISTING MAP REFACTOR)
+---------------------------------------------------------------
+1) Central actuator sign/direction convention idea.
+   - Added App/Services/SolenoidOutput/rcs_direction_map.h
+   - Existing 2026-09-09 X/Y physical swap is now represented in one pure
+     logical->physical mapping function.
+   - Controller, ESKF, interlock, pulse logic and logical telemetry meaning are
+     unchanged.
+
+2) Actuator transport observability idea, adapted from CAN/ODrive to GPIO RCS.
+   Added read-only SolenoidOutputStatus_t diagnostics:
+   - physical_command_mask (IN1..IN4 bit order)
+   - physical_readback_mask
+   - physical_readback_ok
+   - physical_write_count
+   - physical_readback_mismatch_count
+   - last_request_us / last_physical_write_us
+   - last_request_to_write_us / max_request_to_write_us
+   - direction_map_revision
+   No safety/control decision consumes these fields.
+
+3) Added host-only mapping test:
+   tools/p83_rcs_direction_map_host_test.c
+   It verifies:
+     logical X+ -> IN2
+     logical X- -> IN1
+     logical Y+ -> IN4
+     logical Y- -> IN3
+
+ALREADY PRESENT IN P83 - NOT DUPLICATED
+---------------------------------------
+- 1 MHz microsecond timebase (TIM2 / micros()).
+- Per-task execution, lateness, overrun/deadline and CPU-load diagnostics.
+- PE9 flight authorization and final actuator safety gating.
+- RCS opposing-pair interlock and pulse-duration diagnostics.
+- SD startup quiet-window / actuator-aware logging protections.
+
+DELIBERATELY NOT MERGED
+-----------------------
+- R46 CAN-ID swap, rotating mailbox scan, TX IRQ refill: P83 has GPIO relay RCS,
+  not ODrive/CAN control. Importing this would add unrelated failure modes.
+- ODrive node mapping/current/trajectory limits: different actuator architecture.
+- R46 LQR gains, 7-turn differential authority, tether profiles: not the same
+  controller or actuator plant.
+- R46 navigation/hover target settings: P83/TARAGAY flight logic remains source
+  of truth.
+- Hardware IWDG/watchdog enable: useful concept, but NOT added in this merge.
+  P83 SD and recovery paths have known long service windows; enabling a watchdog
+  requires a dedicated reset-window qualification campaign.
+
+BEHAVIORAL INTENT
+-----------------
+This merge must not change the mathematical controller, IMU/rocket matrix, ESKF,
+PE9 logic, RCS pulse calculation, interlock timing, SD/UART schema, scheduler
+periods, or needle-valve control. The only actuation-side refactor reproduces the
+already-approved X/Y physical swap through an explicit map.
+
+BUILD-ARTIFACT SAFETY
+---------------------
+Removed only the stale Debug artifacts belonging to modified solenoid_output.c:
+- Debug/App/Services/SolenoidOutput/solenoid_output.o
+- Debug/App/Services/SolenoidOutput/solenoid_output.d
+- Debug/App/Services/SolenoidOutput/solenoid_output.su
+- Debug/App/Services/SolenoidOutput/solenoid_output.cyclo
+This forces CubeIDE to compile the edited source instead of accidentally linking
+an older object. Other project build artifacts were left untouched to minimize
+package churn.

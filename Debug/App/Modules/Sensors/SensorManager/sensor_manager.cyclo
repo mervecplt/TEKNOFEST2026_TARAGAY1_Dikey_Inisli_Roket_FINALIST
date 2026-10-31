@@ -1,0 +1,16 @@
+../App/Modules/Sensors/SensorManager/sensor_manager.c:164:14:SensorManager_FastSqrtApprox	3
+../App/Modules/Sensors/SensorManager/sensor_manager.c:181:13:SensorManager_ResetIMUCalibrationWindow	2
+../App/Modules/Sensors/SensorManager/sensor_manager.c:198:16:SensorManager_UpdateIMUCalibration	25
+../App/Modules/Sensors/SensorManager/sensor_manager.c:423:16:SensorManager_InitIMUFilters	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:487:13:SensorManager_ResetIMUFilters	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:510:13:SensorManager_UpdateIMUFilters	8
+../App/Modules/Sensors/SensorManager/sensor_manager.c:595:13:SensorManager_UpdateLiveDebug	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:667:6:SensorManager_Init	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:780:6:SensorManager_UpdateIMU	6
+../App/Modules/Sensors/SensorManager/sensor_manager.c:901:6:SensorManager_UpdateBarometer	5
+../App/Modules/Sensors/SensorManager/sensor_manager.c:954:6:SensorManager_ServiceFreshness	5
+../App/Modules/Sensors/SensorManager/sensor_manager.c:984:14:SensorManager_GetData	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:989:21:SensorManager_GetDataPtr	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:994:9:SensorManager_IsIMUValid	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:999:9:SensorManager_IsBarometerValid	1
+../App/Modules/Sensors/SensorManager/sensor_manager.c:1004:10:SensorManager_GetUpdateCount	1

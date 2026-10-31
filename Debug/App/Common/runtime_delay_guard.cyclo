@@ -1,0 +1,5 @@
+../App/Common/runtime_delay_guard.c:8:6:RuntimeDelayGuard_Init	1
+../App/Common/runtime_delay_guard.c:15:6:RuntimeDelayGuard_MarkRuntimeStarted	1
+../App/Common/runtime_delay_guard.c:20:10:RuntimeDelayGuard_GetViolationCount	1
+../App/Common/runtime_delay_guard.c:25:10:RuntimeDelayGuard_GetLastRequestedMs	1
+../App/Common/runtime_delay_guard.c:38:6:HAL_Delay	4

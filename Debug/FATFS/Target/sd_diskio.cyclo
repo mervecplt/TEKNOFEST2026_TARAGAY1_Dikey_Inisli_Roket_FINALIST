@@ -1,0 +1,10 @@
+../FATFS/Target/sd_diskio.c:97:16:SD_CheckStatus	2
+../FATFS/Target/sd_diskio.c:113:16:SD_WaitForDMA	5
+../FATFS/Target/sd_diskio.c:150:16:SD_WaitForCardTransfer	3
+../FATFS/Target/sd_diskio.c:176:16:SD_ReadAligned	3
+../FATFS/Target/sd_diskio.c:205:16:SD_WriteAligned	3
+../FATFS/Target/sd_diskio.c:227:9:SD_initialize	2
+../FATFS/Target/sd_diskio.c:241:9:SD_status	1
+../FATFS/Target/sd_diskio.c:248:9:SD_read	9
+../FATFS/Target/sd_diskio.c:312:9:SD_write	9
+../FATFS/Target/sd_diskio.c:377:9:SD_ioctl	6

@@ -1,0 +1,5 @@
+../App/Services/CDCTelemetry/cdc_telemetry.c:92:16:CDCTelemetry_FloatToScaledInt	16	static
+../App/Services/CDCTelemetry/cdc_telemetry.c:104:16:CDCTelemetry_IsUSBReady	16	static
+../App/Services/CDCTelemetry/cdc_telemetry.c:133:13:CDCTelemetry_RecoverUSBIfStuck	16	static
+../App/Services/CDCTelemetry/cdc_telemetry.c:173:6:CDCTelemetry_Init	8	static
+../App/Services/CDCTelemetry/cdc_telemetry.c:195:6:CDCTelemetry_PrintPeriodic	904	static

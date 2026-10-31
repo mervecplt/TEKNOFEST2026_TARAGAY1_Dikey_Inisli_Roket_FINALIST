@@ -1,0 +1,11 @@
+../App/Modules/Control/VerticalSensorPolicy/vertical_sensor_policy.h:38:1:VerticalSensorPolicy_Evaluate	20
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:21:14:GeneratedFlightControl_Clamp	3
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:28:13:GeneratedFlightControl_RecordVerticalPolicy	6
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:62:13:GeneratedFlightControl_VerticalOuterLoop200Hz	6
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:154:13:GeneratedFlightControl_ClearOutputs	1
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:165:16:GeneratedFlightControl_AllFinite	15
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:185:6:GeneratedFlightControl_Init	2
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:208:6:GeneratedFlightControl_Step100Hz	25
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:294:6:GeneratedFlightControl_HoldSafe	1
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:313:6:GeneratedFlightControl_Service200Hz	1
+../App/Modules/Control/GeneratedFlightControl/generated_flight_control.c:399:32:GeneratedFlightControl_GetStatus	1

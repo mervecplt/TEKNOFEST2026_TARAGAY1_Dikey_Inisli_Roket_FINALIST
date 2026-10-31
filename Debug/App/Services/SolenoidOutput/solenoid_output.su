@@ -1,0 +1,17 @@
+../App/Services/SolenoidOutput/rcs_direction_map.h:37:23:RcsDirectionMap_LogicalToPhysical	24	static
+../App/Services/SolenoidOutput/solenoid_output.c:64:16:SolenoidOutput_SanitizeMask	24	static
+../App/Services/SolenoidOutput/solenoid_output.c:95:13:SolenoidOutput_WritePin	16	static
+../App/Services/SolenoidOutput/solenoid_output.c:108:16:SolenoidOutput_ReadPhysicalMask	16	static
+../App/Services/SolenoidOutput/solenoid_output.c:124:13:SolenoidOutput_WritePhysical	32	static
+../App/Services/SolenoidOutput/solenoid_output.c:185:13:SolenoidOutput_ConfigureHardware	40	static
+../App/Services/SolenoidOutput/solenoid_output.c:214:6:SolenoidOutput_Init	8	static
+../App/Services/SolenoidOutput/solenoid_output.c:246:6:SolenoidOutput_SetMask	32	static
+../App/Services/SolenoidOutput/solenoid_output.c:325:6:SolenoidOutput_SetAxisBenchMask	24	static
+../App/Services/SolenoidOutput/solenoid_output.c:379:6:SolenoidOutput_SetDemand	16	static
+../App/Services/SolenoidOutput/solenoid_output.c:388:6:SolenoidOutput_ForceSafe	8	static
+../App/Services/SolenoidOutput/solenoid_output.c:393:9:SolenoidOutput_SetGroundVentMask	24	static
+../App/Services/SolenoidOutput/solenoid_output.c:461:6:SolenoidOutput_BenchTestInit	8	static
+../App/Services/SolenoidOutput/solenoid_output.c:470:6:SolenoidOutput_BenchTestUpdate	4	static
+../App/Services/SolenoidOutput/solenoid_output.c:482:24:SolenoidOutput_GetStatus	24	static
+../App/Services/SolenoidOutput/solenoid_output.c:487:9:SolenoidOutput_GetRequestedMask	4	static
+../App/Services/SolenoidOutput/solenoid_output.c:492:9:SolenoidOutput_GetAppliedMask	4	static

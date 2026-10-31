@@ -1,0 +1,78 @@
+POWER-ON FULL SD RECORD - STATIC VALIDATION
+
+[PASS] SDLogger host GCC syntax-only: exit 0
+[PASS] Only firmware source logic changed: App/Services/SDLogger/sd_logger.c
+[PASS] Control/actuator/RCS/PE9 source files byte-identical to uploaded base:
+  SAME  App/Modules/Control/TaragayFlightLogic/taragay_flight_logic.c  70cfef8690523749a9b9cb74bb436e1ddc74500d3003e7439826b852b61344d1
+  SAME  App/Modules/Control/NeedleValve/needle_valve_controller.c  0b1effa604870cba60cc799f15954050a3a07a5adb91ce5baebeb56355a6815f
+  SAME  App/Services/NeedleValveAutonomousControl/needle_valve_autonomous_control.c  34ae5b9902c9f91fcffacc45e8f4962b5ef199db640f352f3fee7c80089326b3
+  SAME  App/Services/NeedleValveHardware/needle_valve_hw.c  b439781f1fc3923cc4f93528ee42b431b8dc24b04cb82939475d8f6e7d041f4f
+  SAME  App/Services/NeedleValveAutoControl/needle_valve_auto_control.c  43806436859fc6981be80fae4ab4920853b3c78988d3bcff23aea8a470da58ea
+  SAME  App/Services/SolenoidOutput/solenoid_output.c  0375ca51338e3770fd7ab31c8ac14b06b9bd0dfe096f8fb8623533ee13d022de
+  SAME  App/Services/PreflightTrigger/preflight_trigger.c  f64673a58bd26684d0d75e604fd7bb84efc5baecc6861ab1bdc4f3fea552ad27
+  SAME  App/app.c  26e592aed9a2d244a34eedffa92c0ccb32f96dfe2b477c1991e444dc61488897
+  SAME  App/Common/app_config.h  412932e8c8d613b14d577f487969f4bf9295f470dd34281d6da833a990c91490
+
+[INFO] Logger source diff:
+--- /mnt/data/taragay_full_record_work/TARAGAY_T1_R4R3_NRF_RX_ONLY_GROUND100HZ_RF250K_XY_ONLY_FIX/App/Services/SDLogger/sd_logger.c	2026-09-09 17:00:22.000000000 +0000
++++ /mnt/data/TARAGAY_T1_POWER_ON_FULL_SD_RECORD/App/Services/SDLogger/sd_logger.c	2026-09-10 22:46:10.240032292 +0000
+@@ -2194,19 +2194,15 @@
+     }
+ 
+ #if (APP_SDLOGGER_PE9_LIVE_WRITE_ENABLED != 0U)
+-    /* PE9 is the recording epoch. Boot still mounts/preallocates the file and
+-     * source snapshots continue to update, but no flight data frame is pushed
+-     * into the writer ring before a validated separation latch. */
+-    if (PreflightTrigger_IsFlightActive() == 0U)
+-    {
+-        uint32_t duration_us = micros() - isr_start_us;
+-        sd_logger_timer_last_isr_duration_us = duration_us;
+-        if (duration_us > sd_logger_timer_max_isr_duration_us)
+-        {
+-            sd_logger_timer_max_isr_duration_us = duration_us;
+-        }
+-        return;
+-    }
++    /* POWER-SESSION RECORD MODE:
++     * Recording starts as soon as SDLogger_Init() has mounted/preallocated the
++     * card and TIM5 is started at boot. PE9/flight state does NOT gate capture.
++     * Therefore preflight, connector separation, active control, STOP and the
++     * post-STOP powered interval are all captured continuously until MCU power
++     * is removed (or SDLogger_Stop() is explicitly called elsewhere).
++     *
++     * IMPORTANT: only the logger capture gate is changed. Control, actuator,
++     * PE9 interlock and RCS logic are untouched. */
+ #endif
+ 
+     if ((sd_logger_logging_active != 0U) &&
+@@ -4478,21 +4474,11 @@
+         return;
+     }
+ #else
+-    /* PE9-live mode: file/mount/preallocation are prepared at boot, while the
+-     * capture ISR is gated before PE9. Do not launch ordinary data SDIO
+-     * commands until separation; once flight_active latches, use the existing
+-     * non-blocking 30 Hz ring -> 4-frame buffer -> raw-DMA writer continuously.
+-     * In-flight write failures are already fail-open for control: no blocking
+-     * host re-enumeration is attempted while flight_active is true. */
+-    if (PreflightTrigger_IsFlightActive() == 0U)
+-    {
+-        if (sd_async_state != SDLOGGER_ASYNC_IDLE)
+-        {
+-            SDLogger_ServiceAsyncDMA();
+-        }
+-        SDLogger_UpdateLiveDebug();
+-        return;
+-    }
++    /* POWER-SESSION RECORD MODE:
++     * The raw-DMA writer is serviced continuously from boot-ready until power
++     * removal. PE9/flight state no longer gates SD data launches. Existing
++     * flight-safe failure policy is intentionally preserved: while flight is
++     * active, SD recovery must never block the control loop. */
+ #endif
+ 
+     /* Proven non-blocking raw-SD DMA path. In PE9-live mode this is the active
+
+[INFO] Debug/Release build outputs removed intentionally; CubeIDE should perform a fresh build.
+[LIMIT] ARM target build and real hardware SD soak test were not run in this environment.
+[LIMIT] Hard power removal can lose the final not-yet-committed DMA buffer; existing preallocation/CRC recovery remains unchanged.

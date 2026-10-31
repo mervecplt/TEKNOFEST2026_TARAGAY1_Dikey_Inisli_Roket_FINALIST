@@ -1,0 +1,8 @@
+../App/Services/BusManager/bus_manager.c:48:13:BusManager_UpdateLiveDebug	1
+../App/Services/BusManager/bus_manager.c:89:19:BusManager_HalToBusError	4
+../App/Services/BusManager/bus_manager.c:109:13:BusManager_SetHardFault	4
+../App/Services/BusManager/bus_manager.c:146:13:BusManager_SetSlowWarning	2
+../App/Services/BusManager/bus_manager.c:173:6:BusManager_Init	2
+../App/Services/BusManager/bus_manager.c:207:13:BusManager_GetStatus	2
+../App/Services/BusManager/bus_manager.c:219:19:BusManager_SPI_TransmitReceive	10
+../App/Services/BusManager/bus_manager.c:296:19:BusManager_SPI_Transmit	9

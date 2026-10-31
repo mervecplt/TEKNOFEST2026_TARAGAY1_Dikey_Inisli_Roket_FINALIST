@@ -1,0 +1,5 @@
+../Core/Src/usart.c:34:13:USART2_DMA_DisableAndWait	4	static
+../Core/Src/usart.c:44:6:MX_USART2_UART_Init	48	static
+../Core/Src/usart.c:116:9:USART2_TxDMA_Start	24	static,ignoring_inline_asm
+../Core/Src/usart.c:161:9:USART2_TxDMA_IsBusy	4	static
+../Core/Src/usart.c:166:6:USART2_TxDMA_IRQHandler	16	static

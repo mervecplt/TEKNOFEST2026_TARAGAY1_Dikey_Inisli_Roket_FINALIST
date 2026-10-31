@@ -1,0 +1,10 @@
+../App/Modules/RemoteControl/remote_control.c:52:16:RemoteControl_Checksum	16	static
+../App/Modules/RemoteControl/remote_control.c:57:16:RemoteControl_IsPacketValid	24	static
+../App/Modules/RemoteControl/remote_control.c:80:13:RemoteControl_ApplyLed	16	static
+../App/Modules/RemoteControl/remote_control.c:94:6:RemoteControl_Init	16	static
+../App/Modules/RemoteControl/remote_control.c:135:6:RemoteControl_Update	24	static
+../App/Modules/RemoteControl/remote_control.c:252:6:RemoteControl_OnIrq	4	static
+../App/Modules/RemoteControl/remote_control.c:258:9:RemoteControl_GetCommand	4	static
+../App/Modules/RemoteControl/remote_control.c:263:9:RemoteControl_IsLinkActive	4	static
+../App/Modules/RemoteControl/remote_control.c:268:9:RemoteControl_GetCommandFlags	4	static
+../App/Modules/RemoteControl/remote_control.c:273:9:RemoteControl_GetSwitch2Command	4	static

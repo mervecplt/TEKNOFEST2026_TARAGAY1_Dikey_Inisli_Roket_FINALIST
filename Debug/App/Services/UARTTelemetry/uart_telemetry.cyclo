@@ -1,0 +1,16 @@
+../App/Services/UARTTelemetry/uart_telemetry.c:315:16:UARTTelemetry_ScaleFloat	5
+../App/Services/UARTTelemetry/uart_telemetry.c:341:17:UARTTelemetry_SampleAgeMs	2
+../App/Services/UARTTelemetry/uart_telemetry.c:355:13:UARTTelemetry_TakeSnapshot	9
+../App/Services/UARTTelemetry/uart_telemetry.c:590:16:UARTTelemetry_SendText	2
+../App/Services/UARTTelemetry/uart_telemetry.c:603:6:UARTTelemetry_Init	3
+../App/Services/UARTTelemetry/uart_telemetry.c:628:16:UARTTelemetry_AppendChar	2
+../App/Services/UARTTelemetry/uart_telemetry.c:642:16:UARTTelemetry_AppendText	4
+../App/Services/UARTTelemetry/uart_telemetry.c:660:16:UARTTelemetry_AppendUnsigned	6
+../App/Services/UARTTelemetry/uart_telemetry.c:696:16:UARTTelemetry_AppendSigned	3
+../App/Services/UARTTelemetry/uart_telemetry.c:720:16:UARTTelemetry_AppendHex16	3
+../App/Services/UARTTelemetry/uart_telemetry.c:779:17:UARTTelemetry_Crc16Ccitt	3
+../App/Services/UARTTelemetry/uart_telemetry.c:799:16:UARTTelemetry_BuildDataLine	1002
+../App/Services/UARTTelemetry/uart_telemetry.c:1428:17:UARTTelemetry_ProfileCyclesToUs	2
+../App/Services/UARTTelemetry/uart_telemetry.c:1441:16:UARTTelemetry_BuildTimingLine	686
+../App/Services/UARTTelemetry/uart_telemetry.c:1922:16:UARTTelemetry_BuildR14BenchLine	74
+../App/Services/UARTTelemetry/uart_telemetry.c:2018:6:UARTTelemetry_Update10Hz	10

@@ -1,0 +1,4 @@
+../App/Modules/Control/VerticalSensorPolicy/vertical_sensor_policy.h:38:1:VerticalSensorPolicy_Evaluate	20
+../App/Modules/Control/ControlInputProvider/control_input_provider.c:9:6:ControlInputProvider_Init	2
+../App/Modules/Control/ControlInputProvider/control_input_provider.c:15:28:ControlInputProvider_Update	17
+../App/Modules/Control/ControlInputProvider/control_input_provider.c:62:28:ControlInputProvider_GetData	1

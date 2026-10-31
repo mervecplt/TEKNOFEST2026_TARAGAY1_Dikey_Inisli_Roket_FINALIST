@@ -1,0 +1,20 @@
+TARAGAY-T1 P83 RCS X/Y SWAP VALIDATION
+Date: 2026-09-09
+
+[PASS] Scope: final SolenoidOutput physical relay mapping only.
+[PASS] IMU/ESKF/control-frame code unchanged.
+[PASS] Logical RCS mask values unchanged.
+[PASS] Opposing-axis sanitize/interlock code unchanged.
+[PASS] PE9 / flight authorization path unchanged.
+[PASS] Pulse timing/status logic unchanged.
+[PASS] Host GCC -fsyntax-only: App/Services/SolenoidOutput/solenoid_output.c
+
+Verified final bindings:
+  logical X- / ROLL_NEG  -> IN1 PB15 (code physical X+)
+  logical X+ / ROLL_POS  -> IN2 PE15 (code physical X-)
+  logical Y- / PITCH_NEG -> IN3 PE11 (code physical Y+)
+  logical Y+ / PITCH_POS -> IN4 PE7  (code physical Y-)
+
+NOTE: Host syntax validation is not an STM32CubeIDE target build.
+Before a pressurized test, perform a no-gas relay/solenoid direction test and
+verify all four individual commands plus PE9 cutoff/interlock behavior.

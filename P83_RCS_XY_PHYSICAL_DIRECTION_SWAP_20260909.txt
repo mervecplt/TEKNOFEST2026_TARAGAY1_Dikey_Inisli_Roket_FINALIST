@@ -1,0 +1,32 @@
+TARAGAY-T1 P83 RCS X/Y PHYSICAL DIRECTION SWAP
+Date: 2026-09-09
+
+Reason
+------
+Field observation: IMU -> rocket/control-frame signs are correct, but a logical
+-X correction actuated the +X physical channel and a logical -Y correction
+actuated the +Y physical channel.
+
+Change scope
+------------
+ONLY the final physical relay mapping in:
+  App/Services/SolenoidOutput/solenoid_output.c
+was inverted on both X and Y pairs.
+
+Logical masks, RCS controller, ESKF/IMU matrix, interlocks, PE9 authorization,
+telemetry mask semantics and pulse timing logic are unchanged.
+
+New final mapping
+-----------------
+Logical X- (ROLL_NEG, 0x02)  -> IN1 / PB15 / physical X+
+Logical X+ (ROLL_POS, 0x01)  -> IN2 / PE15 / physical X-
+Logical Y- (PITCH_NEG,0x08)  -> IN3 / PE11 / physical Y+
+Logical Y+ (PITCH_POS,0x04)  -> IN4 / PE7  / physical Y-
+
+Required no-gas verification before live RCS test
+--------------------------------------------------
+1) Keep propulsion/RCS gas isolated.
+2) Command each logical axis separately.
+3) Verify requested/applied mask retains logical meaning.
+4) Verify the physical relay/channel energizes according to the new mapping.
+5) Verify opposing-pair interlock and PE9 same-sample cutoff still operate.

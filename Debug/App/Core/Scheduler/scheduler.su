@@ -1,0 +1,12 @@
+../App/Core/Scheduler/scheduler.c:217:13:Scheduler_CPU_ResetWindow	24	static
+../App/Core/Scheduler/scheduler.c:238:17:Scheduler_CPU_ComputePercentX100	80	static
+../App/Core/Scheduler/scheduler.c:259:13:Scheduler_CPU_UpdateWindow	32	static
+../App/Core/Scheduler/scheduler.c:341:6:Scheduler_Init	16	static
+../App/Core/Scheduler/scheduler.c:432:6:Scheduler_Rebase	16	static
+../App/Core/Scheduler/scheduler.c:451:17:Scheduler_TaskSlotReserveUs	16	static
+../App/Core/Scheduler/scheduler.c:465:10:Scheduler_GetTimeUntilIMUReleaseUs	16	static
+../App/Core/Scheduler/scheduler.c:473:9:Scheduler_HasIMUSlack	24	static
+../App/Core/Scheduler/scheduler.c:479:6:Scheduler_RecordExternalBusyTime	16	static
+../App/Core/Scheduler/scheduler.c:486:6:Scheduler_Run	56	static
+../App/Core/Scheduler/scheduler.c:691:10:Scheduler_GetTaskCount	4	static
+../App/Core/Scheduler/scheduler.c:698:9:Scheduler_GetTask	16	static

@@ -1,0 +1,4 @@
+../App/Common/math_utils.c:5:7:MathUtils_ClampFloat	3
+../App/Common/math_utils.c:20:7:MathUtils_AbsFloat	2
+../App/Common/math_utils.c:30:7:MathUtils_LowPassFloat	3
+../App/Common/math_utils.c:45:7:MathUtils_Vector3Norm	1

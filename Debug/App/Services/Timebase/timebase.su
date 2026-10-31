@@ -1,0 +1,5 @@
+../App/Services/Timebase/timebase.c:23:6:Timebase_Init	16	static
+../App/Services/Timebase/timebase.c:82:10:millis	16	static
+../App/Services/Timebase/timebase.c:93:10:micros	16	static
+../App/Services/Timebase/timebase.c:119:9:Timebase_HasElapsedMs	24	static
+../App/Services/Timebase/timebase.c:130:9:Timebase_HasElapsedUs	24	static

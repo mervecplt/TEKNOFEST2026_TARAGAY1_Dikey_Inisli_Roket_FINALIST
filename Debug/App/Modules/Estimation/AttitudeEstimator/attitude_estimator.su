@@ -1,0 +1,13 @@
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:61:14:Attitude_Clamp	24	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:78:16:Attitude_IsFinite	16	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:95:13:Attitude_UpdateLiveDebug	4	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:151:16:Attitude_NormalizeQuaternion	16	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:178:13:Attitude_UpdateEulerAngles	48	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:211:13:Attitude_UpdateWorldAcceleration	80	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:264:14:Attitude_ComputeAccelCorrectionWeight	16	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:294:16:Attitude_ResetFromAccelerometer	56	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:374:6:AttitudeEstimator_Init	8	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:427:6:AttitudeEstimator_Update	128	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:681:25:AttitudeEstimator_GetData	16	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:686:32:AttitudeEstimator_GetDataPtr	4	static
+../App/Modules/Estimation/AttitudeEstimator/attitude_estimator.c:693:9:AttitudeEstimator_IsHealthy	4	static

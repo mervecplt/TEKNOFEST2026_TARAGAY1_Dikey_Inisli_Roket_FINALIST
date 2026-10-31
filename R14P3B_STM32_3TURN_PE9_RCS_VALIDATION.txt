@@ -1,0 +1,25 @@
+TARAGAY-T1 R14p3b/R14p4 STM32 correction validation
+Date: 2026-09-08
+
+CONFIG
+PASS - APP_R8R32_NEEDLE_ADC_PER_TURN = 195
+PASS - APP_R8R32_NEEDLE_MAX_TURNS = 3
+PASS - max commanded travel = 195 * 3 = 585 ADC
+PASS - Taragay control uses shared physical max-turn config
+PASS - full 0..3 turn Cv lookup restored, Cv max = 1.82
+
+RCS
+PASS - pre-PE9 RCS request is forced zero
+PASS - pre-PE9 RCS runtime is reset every control step
+PASS - no preflight emergency-only pulse path remains in final request gate
+PASS - physical RCS handoff independently requires PreflightTrigger_IsFlightActive()
+PASS - SAFE state remains RCS all-off
+
+HOST GCC SYNTAX
+PASS - App/Modules/Control/TaragayFlightLogic/taragay_flight_logic.c
+PASS - App/Modules/Control/NeedleValve/needle_valve_controller.c
+PASS - App/Services/NeedleValveAutonomousControl/needle_valve_autonomous_control.c
+PASS - App/Core/Tasks/app_tasks.c
+
+NOTE
+Host syntax/static checks are not a CubeIDE ARM link/build and are not hardware validation.

@@ -1,0 +1,2 @@
+../App/Services/DebugDashboard/debug_dashboard.c:31:6:DebugDashboard_Init	4	static
+../App/Services/DebugDashboard/debug_dashboard.c:54:6:DebugDashboard_Update	24	static

@@ -1,0 +1,4 @@
+../App/Common/Filters/butterworth_filter.c:8:9:Butterworth2LPF_Init	5
+../App/Common/Filters/butterworth_filter.c:70:6:Butterworth2LPF_Reset	3
+../App/Common/Filters/butterworth_filter.c:94:7:Butterworth2LPF_Process	4
+../App/Common/Filters/butterworth_filter.c:134:9:Butterworth2LPF_IsConfigured	2

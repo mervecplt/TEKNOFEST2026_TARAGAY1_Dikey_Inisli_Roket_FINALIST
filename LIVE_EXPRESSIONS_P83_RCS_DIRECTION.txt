@@ -1,0 +1,30 @@
+TARAGAY-T1 P83 RCS DIRECTION / GPIO OBSERVER
+=============================================
+Observer-only. Do not use these fields as control inputs.
+
+CubeIDE Live Expressions:
+
+solenoid_status.requested_mask
+solenoid_status.applied_mask
+solenoid_status.physical_command_mask
+solenoid_status.physical_readback_mask
+solenoid_status.physical_readback_ok
+solenoid_status.direction_map_revision
+solenoid_status.physical_write_count
+solenoid_status.physical_readback_mismatch_count
+solenoid_status.last_request_us
+solenoid_status.last_physical_write_us
+solenoid_status.last_request_to_write_us
+solenoid_status.max_request_to_write_us
+
+Expected 2026-09-09 swapped mapping (physical mask bits = IN1,IN2,IN3,IN4):
+logical X+ 0x01 -> physical IN2 0x02
+logical X- 0x02 -> physical IN1 0x01
+logical Y+ 0x04 -> physical IN4 0x08
+logical Y- 0x08 -> physical IN3 0x04
+
+physical_readback_ok should remain 1 after each GPIO transition.
+physical_readback_mismatch_count should remain 0.
+
+Note: requested_mask and applied_mask deliberately remain in LOGICAL control-sign
+convention. Only physical_command_mask/readback_mask are raw relay-channel masks.

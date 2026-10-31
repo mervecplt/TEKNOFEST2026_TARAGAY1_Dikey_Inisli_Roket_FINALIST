@@ -1,0 +1,14 @@
+../App/Modules/Control/VerticalSensorPolicy/vertical_sensor_policy.h:38:1:VerticalSensorPolicy_Evaluate	20
+../App/Services/SystemMonitor/system_monitor.c:114:13:SystemMonitor_UpdateLiveDebug	1
+../App/Services/SystemMonitor/system_monitor.c:177:13:SystemMonitor_ResetStatus	1
+../App/Services/SystemMonitor/system_monitor.c:200:17:SystemMonitor_AgeUs	2
+../App/Services/SystemMonitor/system_monitor.c:213:13:SystemMonitor_UpdateSensorHealth	4
+../App/Services/SystemMonitor/system_monitor.c:252:13:SystemMonitor_UpdateSchedulerHealth	17
+../App/Services/SystemMonitor/system_monitor.c:368:13:SystemMonitor_UpdateBusHealth	1
+../App/Services/SystemMonitor/system_monitor.c:398:13:SystemMonitor_UpdateFaultCode	21
+../App/Services/SystemMonitor/system_monitor.c:507:19:SystemMonitor_GetFastFaultCode	32
+../App/Services/SystemMonitor/system_monitor.c:607:9:SystemMonitor_IsFastFaultActive	2
+../App/Services/SystemMonitor/system_monitor.c:612:9:SystemMonitor_IsActuatorFaultActive	11
+../App/Services/SystemMonitor/system_monitor.c:656:6:SystemMonitor_Init	1
+../App/Services/SystemMonitor/system_monitor.c:661:6:SystemMonitor_Update	12
+../App/Services/SystemMonitor/system_monitor.c:695:16:SystemMonitor_GetStatus	1

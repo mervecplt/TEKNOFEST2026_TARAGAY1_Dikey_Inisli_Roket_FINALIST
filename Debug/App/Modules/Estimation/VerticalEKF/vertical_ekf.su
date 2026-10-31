@@ -1,0 +1,17 @@
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:69:14:VerticalEKF_Abs	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:76:16:VerticalEKF_IsFiniteReasonable	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:93:13:VerticalEKF_UpdateLiveDebug	4	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:140:13:VerticalEKF_SetInitialCovariance	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:165:13:VerticalEKF_InitializeState	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:197:13:VerticalEKF_ResetDynamics	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:215:13:VerticalEKF_Predict	200	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:354:16:VerticalEKF_CorrectAltitude	176	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:490:13:VerticalEKF_ProcessBarometer	24	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:556:13:VerticalEKF_ProcessLidar	24	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:642:16:VerticalEKF_CheckNumericalHealth	8	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:670:6:VerticalEKF_Init	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:740:6:VerticalEKF_Reset	16	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:755:6:VerticalEKF_Update	440	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:853:9:VerticalEKF_IsInitialized	4	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:860:9:VerticalEKF_IsHealthy	4	static
+../App/Modules/Estimation/VerticalEKF/vertical_ekf.c:867:19:VerticalEKF_GetData	16	static

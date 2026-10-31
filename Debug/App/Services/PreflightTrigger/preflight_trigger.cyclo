@@ -1,0 +1,8 @@
+../App/Services/PreflightTrigger/preflight_trigger.c:22:16:PreflightTrigger_ReadOpen	2
+../App/Services/PreflightTrigger/preflight_trigger.c:30:13:PreflightTrigger_ConfigurePE9	1
+../App/Services/PreflightTrigger/preflight_trigger.c:42:13:PreflightTrigger_UpdateReadiness	33
+../App/Services/PreflightTrigger/preflight_trigger.c:112:6:PreflightTrigger_Init	2
+../App/Services/PreflightTrigger/preflight_trigger.c:145:6:PreflightTrigger_Update	25
+../App/Services/PreflightTrigger/preflight_trigger.c:299:9:PreflightTrigger_IsFlightActive	1
+../App/Services/PreflightTrigger/preflight_trigger.c:304:9:PreflightTrigger_HasFault	1
+../App/Services/PreflightTrigger/preflight_trigger.c:309:26:PreflightTrigger_GetStatus	1

@@ -1,0 +1,12 @@
+../App/Services/SensorQualification/sensor_qualification.c:105:16:SensorQual_Finite	1
+../App/Services/SensorQualification/sensor_qualification.c:110:16:SensorQual_ScaleSigned	4
+../App/Services/SensorQualification/sensor_qualification.c:134:17:SensorQual_RateX10	4
+../App/Services/SensorQualification/sensor_qualification.c:149:17:SensorQual_CountRateX10	3
+../App/Services/SensorQualification/sensor_qualification.c:159:17:SensorQual_AbsDiffU32	2
+../App/Services/SensorQualification/sensor_qualification.c:164:16:SensorQual_RateInside	4
+../App/Services/SensorQualification/sensor_qualification.c:172:17:SensorQual_Checksum	2
+../App/Services/SensorQualification/sensor_qualification.c:186:17:BaroDiag_Checksum	3
+../App/Services/SensorQualification/sensor_qualification.c:202:13:SensorQual_WriteDiagnostic	5
+../App/Services/SensorQualification/sensor_qualification.c:314:13:SensorQual_WriteBarometerDiagnostic	30
+../App/Services/SensorQualification/sensor_qualification.c:494:6:SensorQualification_Init	4
+../App/Services/SensorQualification/sensor_qualification.c:564:6:SensorQualification_Update10Hz	98

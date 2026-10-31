@@ -1,0 +1,13 @@
+../App/Services/NRFTelemetry/nrf_telemetry.c:54:17:TlmCrc16	4
+../App/Services/NRFTelemetry/nrf_telemetry.c:69:13:PutU32	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:77:13:PutI16Pair	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:87:13:PutFloat	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:94:13:PutU16	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:100:13:PutI16	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:105:16:ScaleI16	5
+../App/Services/NRFTelemetry/nrf_telemetry.c:115:17:ScaleU16	4
+../App/Services/NRFTelemetry/nrf_telemetry.c:125:16:CommonFlags	13
+../App/Services/NRFTelemetry/nrf_telemetry.c:167:13:BuildFast	10
+../App/Services/NRFTelemetry/nrf_telemetry.c:213:13:BuildPage	19
+../App/Services/NRFTelemetry/nrf_telemetry.c:410:6:NRFTelemetry_Init	1
+../App/Services/NRFTelemetry/nrf_telemetry.c:442:6:NRFTelemetry_Service	23

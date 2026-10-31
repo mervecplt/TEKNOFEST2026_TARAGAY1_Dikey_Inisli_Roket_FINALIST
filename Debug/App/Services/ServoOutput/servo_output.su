@@ -1,0 +1,6 @@
+../App/Services/ServoOutput/servo_output.c:40:17:ServoOutput_ClampPulse	16	static
+../App/Services/ServoOutput/servo_output.c:55:17:ServoOutput_GetTim4ClockHz	40	static
+../App/Services/ServoOutput/servo_output.c:72:13:ServoOutput_WritePulse	24	static
+../App/Services/ServoOutput/servo_output.c:85:6:ServoOutput_Init	4	static
+../App/Services/ServoOutput/servo_output.c:168:6:ServoOutput_Update	16	static
+../App/Services/ServoOutput/servo_output.c:285:6:ServoOutput_ForceClosed	4	static

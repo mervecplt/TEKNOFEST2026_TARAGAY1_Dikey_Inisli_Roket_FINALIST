@@ -1,0 +1,5 @@
+../Core/Src/spi.c:31:6:MX_SPI1_Init	2
+../Core/Src/spi.c:96:6:MX_SPI2_Init	2
+../Core/Src/spi.c:164:6:MX_SPI3_Init	2
+../Core/Src/spi.c:208:6:HAL_SPI_MspInit	8
+../Core/Src/spi.c:400:6:HAL_SPI_MspDeInit	4

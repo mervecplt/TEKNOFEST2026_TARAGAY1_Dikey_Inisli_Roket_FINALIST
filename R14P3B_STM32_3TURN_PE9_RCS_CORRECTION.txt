@@ -1,0 +1,11 @@
+TARAGAY-T1 R14p3b/R14p4 STM32 correction
+
+- Main needle max command: 3.0 mechanical turns.
+- Feedback scale: 195 ADC/turn.
+- Max commanded travel: 585 ADC.
+- Full 0..3 turn Cv map restored (Cv max 1.82).
+- RCS request is hard-zero before PE9; no preflight emergency pulse.
+- RCS runtime is reset before PE9 to prevent stale pulse carry-over.
+- Physical RCS handoff still independently requires PreflightTrigger_IsFlightActive().
+- Normal control tuning remains in taragay_control_tuning.h.
+- Physical turn geometry is centralized in App/Common/app_config.h.
